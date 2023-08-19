@@ -64,6 +64,7 @@ public class VendingMachineService {
 
         List<ProductDTO> productsDTOs= new ArrayList<>();
 
+
         products.forEach( (product) -> {
 
 
@@ -76,11 +77,13 @@ public class VendingMachineService {
             productsDTOs.add(productDTO);
         });
 
+
         return productsDTOs;
     }
 
     public APIResponseDTO login(UserDTO newUser) {
         //TODO
+
         User user = userRepository.findById(1L)
                 .orElseThrow( () -> new ResourceNotFoundException("user","id",1L));
 

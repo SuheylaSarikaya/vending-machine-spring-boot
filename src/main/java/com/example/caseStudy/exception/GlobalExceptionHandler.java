@@ -39,19 +39,6 @@ public class GlobalExceptionHandler  {
         return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(ResourceListNotFoundException.class)
-    public ResponseEntity<ErrorDetails> handleResourceListNotFoundException(ResourceListNotFoundException exception,
-                                                                        WebRequest webRequest){
-
-        ErrorDetails errorDetails = new ErrorDetails(
-                LocalDateTime.now(),
-                exception.getMessage(),
-                webRequest.getDescription(false),
-                "LIST_NOT_FOUND"
-        );
-
-        return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
-    }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorDetails> handleGlobalException(Exception exception,
