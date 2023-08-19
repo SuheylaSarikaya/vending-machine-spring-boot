@@ -44,7 +44,6 @@ public class VendingMachineService {
         byte[] fileContent = FileUtils.readFileToByteArray(new File(product.getImg()));
 
         String encodedString = Base64.getEncoder().encodeToString(fileContent);
-
         ProductDTO productDTO = new ProductDTO();
         productDTO.setId(product.getId());
         productDTO.setName(product.getName());
