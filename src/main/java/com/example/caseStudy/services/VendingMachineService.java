@@ -9,7 +9,7 @@ import com.example.caseStudy.entities.Product;
 import com.example.caseStudy.entities.User;
 import com.example.caseStudy.exception.ProductNotFoundException;
 import com.example.caseStudy.exception.ResourceNotFoundException;
-import com.example.caseStudy.mapper.ProductDTOMapper;
+
 import com.example.caseStudy.repos.MachineRepository;
 import com.example.caseStudy.repos.ProductRepository;
 import com.example.caseStudy.repos.UserRepository;
