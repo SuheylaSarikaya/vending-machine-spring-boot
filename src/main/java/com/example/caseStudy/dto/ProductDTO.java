@@ -15,7 +15,7 @@ public class ProductDTO {
     private int count;
     @NotNull
     private String name;
-    @NotNull
+
     private String img;
     @NotNull
     private Double price;

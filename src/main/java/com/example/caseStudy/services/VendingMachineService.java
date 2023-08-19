@@ -40,14 +40,14 @@ public class VendingMachineService {
         this.machineRepository = machineRepository;
     }
     private ProductDTO entityToDTO(Product product) throws IOException {
-
+/*
         byte[] fileContent = FileUtils.readFileToByteArray(new File(product.getImg()));
 
-        String encodedString = Base64.getEncoder().encodeToString(fileContent);
+        String encodedString = Base64.getEncoder().encodeToString(fileContent); */
         ProductDTO productDTO = new ProductDTO();
         productDTO.setId(product.getId());
         productDTO.setName(product.getName());
-        productDTO.setImg(encodedString);
+     //   productDTO.setImg(encodedString);
         productDTO.setPrice(product.getPrice());
         productDTO.setCount(product.getCount());
         productDTO.setTemperature(product.getTemperature());
